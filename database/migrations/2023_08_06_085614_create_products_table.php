@@ -17,10 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->string('name');
-            $table->string('sku');
-            $table->decimal('cost_price', 8,2);
-            $table->decimal('retail_price', 8,2);
-            $table->string('year', 4);
+            $table->decimal('price', 8,2);
             $table->string('description');
             $table->boolean(\App\Models\Product::STATUS_ACTIVE);
             $table->timestamps();

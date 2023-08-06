@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -29,7 +29,16 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|min:2|max:50|unique:categories'
+        ]);
+
+        $product = new Product();
+        $product->name = $request->name;
+        $product->save();
+
+        flash(message:'Category created succefully !')->success();
+        return back();
     }
 
     /**
