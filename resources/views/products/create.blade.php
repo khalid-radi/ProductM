@@ -33,11 +33,16 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Enter category name">
+                    <input type="text" name="name" class="form-control" placeholder="Enter product name">
                     @if ($errors->has('name'))
                         <span class="text-danger">{{$errors->first('name') }}</span>
                         
                     @endif
+                    <label >Price</label>
+                    <input type="text" name="price" class="form-control" placeholder="Enter product price">
+
+                    <label >Description</label>
+                    <input type="text" name="description" class="form-control" placeholder="Enter product description">
                   </div>
                 </div>
                 <!-- /.card-body -->

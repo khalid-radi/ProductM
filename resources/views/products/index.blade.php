@@ -34,6 +34,8 @@
                         <tr>
                             <th>#SL</th>
                             <th>Name</th>
+                            <th>Price</th>
+                            <th>Description</th>
                             <th>Action</th>
                         </tr>
                     </thead>
