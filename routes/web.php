@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\CategoriesController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,6 +28,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-Route::get('/template' ,function(){
-    return view('layouts.master');
-});
+
+//CATEGORY
+Route::resource(name:'categories',controller:CategoriesController::class);
