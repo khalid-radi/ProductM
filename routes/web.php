@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,3 +32,7 @@ Route::middleware([
 
 //CATEGORY
 Route::resource(name:'categories',controller:CategoriesController::class);
+
+//PRODUCT
+Route::resource(name:'products',controller:ProductController::class);
+
